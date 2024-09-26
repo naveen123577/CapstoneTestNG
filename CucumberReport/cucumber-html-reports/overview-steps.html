@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+              <th>Number</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>CucumberAutomation</td>
+              <td>1</td>
+            <td>29 Aug 2024, 10:00</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+          <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+      </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Duration</th>
+            <th>Average</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+                      <tr>
+              <td class="location">com.automation.steps.BusHomeSteps.userClickOnTheBackToTopArrowButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="94424100">094ms</td>
+              <td class="duration" data-value="94424100">094ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusHomeSteps.userClicksOnTheCancelTicketOption()</td>
+              <td>2</td>
+              <td class="duration" data-value="475758100">475ms</td>
+              <td class="duration" data-value="237879050">237ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusHomeSteps.userClicksOnTheProfileDropdownButton()</td>
+              <td>2</td>
+              <td class="duration" data-value="530974900">530ms</td>
+              <td class="duration" data-value="265487450">265ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusHomeSteps.userNavigateToTheOffersPage()</td>
+              <td>1</td>
+              <td class="duration" data-value="334907400">334ms</td>
+              <td class="duration" data-value="334907400">334ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusHomeSteps.userScrollDownThePage()</td>
+              <td>1</td>
+              <td class="duration" data-value="12115329000">12s 115ms</td>
+              <td class="duration" data-value="12115329000">12s 115ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusHomeSteps.user_click_on_the_search_button()</td>
+              <td>9</td>
+              <td class="duration" data-value="1189116200">1s 189ms</td>
+              <td class="duration" data-value="132124022">132ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusHomeSteps.user_enter_as_the_destination_city(java.lang.String)</td>
+              <td>10</td>
+              <td class="duration" data-value="13981697400">13s 981ms</td>
+              <td class="duration" data-value="1398169740">1s 398ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusHomeSteps.user_enter_as_the_source_city(java.lang.String)</td>
+              <td>10</td>
+              <td class="duration" data-value="13485212600">13s 485ms</td>
+              <td class="duration" data-value="1348521260">1s 348ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusHomeSteps.user_opens_the_website()</td>
+              <td>23</td>
+              <td class="duration" data-value="154806387900">2m 34s 806ms</td>
+              <td class="duration" data-value="6730712517">6s 730ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusHomeSteps.user_select_the_date_of_travel_as(java.lang.String)</td>
+              <td>10</td>
+              <td class="duration" data-value="4978235500">4s 978ms</td>
+              <td class="duration" data-value="497823550">497ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusHomeSteps.verifyTheBackToTopArrowButtonAppear()</td>
+              <td>1</td>
+              <td class="duration" data-value="47528700">047ms</td>
+              <td class="duration" data-value="47528700">047ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusHomeSteps.verifyTheBackToTopArrowButtonIsNoLongerDisplayed()</td>
+              <td>1</td>
+              <td class="duration" data-value="37059400">037ms</td>
+              <td class="duration" data-value="37059400">037ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusHomeSteps.verifyTheCitiesAreSwappedAfterClickingTheSwapButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="328891300">328ms</td>
+              <td class="duration" data-value="328891300">328ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusHomeSteps.verifyThePageScrollsToTheTopOfThePage()</td>
+              <td>1</td>
+              <td class="duration" data-value="4045937600">4s 045ms</td>
+              <td class="duration" data-value="4045937600">4s 045ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusHomeSteps.verify_user_is_on_homepage()</td>
+              <td>23</td>
+              <td class="duration" data-value="8551688800">8s 551ms</td>
+              <td class="duration" data-value="371812556">371ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSearchResultSteps.storeThePriceInTheListingPageOfFirstBus()</td>
+              <td>1</td>
+              <td class="duration" data-value="87680400">087ms</td>
+              <td class="duration" data-value="87680400">087ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSearchResultSteps.userClicksOnAnEmptySeat()</td>
+              <td>2</td>
+              <td class="duration" data-value="42577022500">42s 577ms</td>
+              <td class="duration" data-value="21288511250">21s 288ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSearchResultSteps.userClicksOnTheBoardingDroppingPointsOfFirstBus()</td>
+              <td>1</td>
+              <td class="duration" data-value="606184800">606ms</td>
+              <td class="duration" data-value="606184800">606ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSearchResultSteps.userClicksOnTheClearAllFiltersButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="90773258900">1m 30s 773ms</td>
+              <td class="duration" data-value="90773258900">1m 30s 773ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSearchResultSteps.userClicksOnTheHideSeatButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="308840600">308ms</td>
+              <td class="duration" data-value="308840600">308ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSearchResultSteps.userClicksOnTheViewSeatsButton()</td>
+              <td>3</td>
+              <td class="duration" data-value="1496861000">1s 496ms</td>
+              <td class="duration" data-value="498953666">498ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSearchResultSteps.userSelectsACFromTheBusTypeFilter()</td>
+              <td>2</td>
+              <td class="duration" data-value="1702344200">1s 702ms</td>
+              <td class="duration" data-value="851172100">851ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSearchResultSteps.userSelectsNonACFromTheBusTypeFilter()</td>
+              <td>1</td>
+              <td class="duration" data-value="858489900">858ms</td>
+              <td class="duration" data-value="858489900">858ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSearchResultSteps.userSelectsSleeperFromTheBusTypeFilter()</td>
+              <td>1</td>
+              <td class="duration" data-value="315923400">315ms</td>
+              <td class="duration" data-value="315923400">315ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSearchResultSteps.verifyClearAllFiltersButtonIsNotPresent()</td>
+              <td>1</td>
+              <td class="duration" data-value="5055178900">5s 055ms</td>
+              <td class="duration" data-value="5055178900">5s 055ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSearchResultSteps.verifyThatACBusesAreOnlyDisplayedInTheListingPage()</td>
+              <td>2</td>
+              <td class="duration" data-value="83214600">083ms</td>
+              <td class="duration" data-value="41607300">041ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSearchResultSteps.verifyThatNonACBusesAreOnlyDisplayedInTheListingPage()</td>
+              <td>1</td>
+              <td class="duration" data-value="43044300">043ms</td>
+              <td class="duration" data-value="43044300">043ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSearchResultSteps.verifyThatSleeperBusesAreOnlyDisplayedInTheListingPage()</td>
+              <td>1</td>
+              <td class="duration" data-value="123647000">123ms</td>
+              <td class="duration" data-value="123647000">123ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSearchResultSteps.verifyTheBoardingAndDroppingDetailsAreDisplayed()</td>
+              <td>1</td>
+              <td class="duration" data-value="159915800">159ms</td>
+              <td class="duration" data-value="159915800">159ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSearchResultSteps.verifyTheBoardingAndDroppingDetailsListAreNotNull()</td>
+              <td>2</td>
+              <td class="duration" data-value="627868600">627ms</td>
+              <td class="duration" data-value="313934300">313ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSearchResultSteps.verifyTheFullListOfBusesAreDisplayed()</td>
+              <td>1</td>
+              <td class="duration" data-value="4077166800">4s 077ms</td>
+              <td class="duration" data-value="4077166800">4s 077ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSearchResultSteps.verifyTheListOfBusesAreDisplayed()</td>
+              <td>9</td>
+              <td class="duration" data-value="47322382000">47s 322ms</td>
+              <td class="duration" data-value="5258042444">5s 258ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSearchResultSteps.verifyThePriceInTheBoardingAndDroppingSectionIsGreaterThanThePriceInListingPage()</td>
+              <td>1</td>
+              <td class="duration" data-value="41526500">041ms</td>
+              <td class="duration" data-value="41526500">041ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSearchResultSteps.verifyTheSeatPageIsDisplayed()</td>
+              <td>1</td>
+              <td class="duration" data-value="4797680100">4s 797ms</td>
+              <td class="duration" data-value="4797680100">4s 797ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.BusSearchResultSteps.verifyTheSeatsAreNotVisible()</td>
+              <td>1</td>
+              <td class="duration" data-value="5070916900">5s 070ms</td>
+              <td class="duration" data-value="5070916900">5s 070ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.CouponsSteps.verifyEachOfferCouponShouldHaveACouponCodeDisplayed()</td>
+              <td>1</td>
+              <td class="duration" data-value="294995300">294ms</td>
+              <td class="duration" data-value="294995300">294ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.CouponsSteps.verifyOfferCouponsPageIsDisplayed()</td>
+              <td>1</td>
+              <td class="duration" data-value="3108344700">3s 108ms</td>
+              <td class="duration" data-value="3108344700">3s 108ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HelpSteps.clicks_the_language_option()</td>
+              <td>2</td>
+              <td class="duration" data-value="10653110500">10s 653ms</td>
+              <td class="duration" data-value="5326555250">5s 326ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HelpSteps.selectsAsLanguage(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="1551771000">1s 551ms</td>
+              <td class="duration" data-value="775885500">775ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HelpSteps.user_clicks_on_the_help_button()</td>
+              <td>2</td>
+              <td class="duration" data-value="437176800">437ms</td>
+              <td class="duration" data-value="218588400">218ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HelpSteps.verifyThatLanguageHaveBeenAppliedToTheApplication()</td>
+              <td>2</td>
+              <td class="duration" data-value="11705033900">11s 705ms</td>
+              <td class="duration" data-value="5852516950">5s 852ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.Hooks.cleanUp(io.cucumber.java.Scenario)</td>
+              <td>23</td>
+              <td class="duration" data-value="13335930900">13s 335ms</td>
+              <td class="duration" data-value="579823082">579ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.Hooks.setUp(io.cucumber.java.Scenario)</td>
+              <td>23</td>
+              <td class="duration" data-value="106634252300">1m 46s 634ms</td>
+              <td class="duration" data-value="4636271839">4s 636ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.TicketCancelSteps.userClickOnSelectPassengersButton()</td>
+              <td>2</td>
+              <td class="duration" data-value="239931600">239ms</td>
+              <td class="duration" data-value="119965800">119ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.TicketCancelSteps.userEnterIncorrectAnd(java.lang.String,java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="1164005300">1s 164ms</td>
+              <td class="duration" data-value="582002650">582ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.TicketCancelSteps.verifyTheErrorMessageIsDisplayed()</td>
+              <td>2</td>
+              <td class="duration" data-value="1385438600">1s 385ms</td>
+              <td class="duration" data-value="692719300">692ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.TicketCancelSteps.verifyTheTicketCancellationPageIsDisplayed()</td>
+              <td>2</td>
+              <td class="duration" data-value="4364123900">4s 364ms</td>
+              <td class="duration" data-value="2182061950">2s 182ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.TrainBookingStep.clickOnCheckUsernameButton()</td>
+              <td>2</td>
+              <td class="duration" data-value="89807000">089ms</td>
+              <td class="duration" data-value="44903500">044ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.TrainBookingStep.entersTheUserNameInTheField(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="1993078000">1s 993ms</td>
+              <td class="duration" data-value="996539000">996ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.TrainBookingStep.userClicksOnASeatInATrain()</td>
+              <td>2</td>
+              <td class="duration" data-value="9591928400">9s 591ms</td>
+              <td class="duration" data-value="4795964200">4s 795ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.TrainBookingStep.verifyIsDisplayed(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="1333681300">1s 333ms</td>
+              <td class="duration" data-value="666840650">666ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.TrainHomeSteps.choosesADate(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="13294540400">13s 294ms</td>
+              <td class="duration" data-value="13294540400">13s 294ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.TrainHomeSteps.choosesSourceDestination()</td>
+              <td>1</td>
+              <td class="duration" data-value="1798404700">1s 798ms</td>
+              <td class="duration" data-value="1798404700">1s 798ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.TrainHomeSteps.choosesToDestination()</td>
+              <td>1</td>
+              <td class="duration" data-value="1630044500">1s 630ms</td>
+              <td class="duration" data-value="1630044500">1s 630ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.TrainHomeSteps.chooses_from_location()</td>
+              <td>5</td>
+              <td class="duration" data-value="9005145700">9s 005ms</td>
+              <td class="duration" data-value="1801029140">1s 801ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.TrainHomeSteps.chooses_to_location()</td>
+              <td>5</td>
+              <td class="duration" data-value="7142115600">7s 142ms</td>
+              <td class="duration" data-value="1428423120">1s 428ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.TrainHomeSteps.clicksTheLiveTrainStatusOption()</td>
+              <td>1</td>
+              <td class="duration" data-value="2294018700">2s 294ms</td>
+              <td class="duration" data-value="2294018700">2s 294ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.TrainHomeSteps.entersInTheSearchBar(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="3692726400">3s 692ms</td>
+              <td class="duration" data-value="3692726400">3s 692ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.TrainHomeSteps.picksADate()</td>
+              <td>4</td>
+              <td class="duration" data-value="2989150500">2s 989ms</td>
+              <td class="duration" data-value="747287625">747ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.TrainHomeSteps.userClicksTheCheckStatusButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="101320100">101ms</td>
+              <td class="duration" data-value="101320100">101ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.TrainHomeSteps.user_clicks_on_the_train_tickets_option()</td>
+              <td>7</td>
+              <td class="duration" data-value="26151679300">26s 151ms</td>
+              <td class="duration" data-value="3735954185">3s 735ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.TrainHomeSteps.user_clicks_the_search_train_button()</td>
+              <td>5</td>
+              <td class="duration" data-value="8406647700">8s 406ms</td>
+              <td class="duration" data-value="1681329540">1s 681ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.TrainHomeSteps.verifyIsDisplayed(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="629663800">629ms</td>
+              <td class="duration" data-value="629663800">629ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.TrainHomeSteps.verifyUserIsOnTrainHomePage()</td>
+              <td>7</td>
+              <td class="duration" data-value="1147171000">1s 147ms</td>
+              <td class="duration" data-value="163881571">163ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.TrainSearchResultSteps.verifyMessageIsDisplayed(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="3026829800">3s 026ms</td>
+              <td class="duration" data-value="3026829800">3s 026ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.TrainSearchResultSteps.verifySourceAndDestinationHaveBeenSwappedAfterClickingTheSwapButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="390136800">390ms</td>
+              <td class="duration" data-value="390136800">390ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.TrainSearchResultSteps.verifyStatusOfTheTrainIsDisplayed()</td>
+              <td>1</td>
+              <td class="duration" data-value="1251101100">1s 251ms</td>
+              <td class="duration" data-value="1251101100">1s 251ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.TrainSearchResultSteps.verify_user_see_results_for_the_same()</td>
+              <td>3</td>
+              <td class="duration" data-value="6315452200">6s 315ms</td>
+              <td class="duration" data-value="2105150733">2s 105ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                  </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>68</td>
+            <td>248</td>
+            <td class="duration">11m 18s 281ms</td>
+            <td class="duration">2s 735ms</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
