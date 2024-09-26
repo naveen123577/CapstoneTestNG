@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Item Name Validation">
+    <listeners>
+        <listener class-name="com.automation.listeners.AllureReportListener"></listener>
+    </listeners>
+
+    <test name="Sample Testes">
+        <classes>
+            <class name="com.automation.test.ItemDetailsTest"></class>
+        </classes>
+    </test>
+</suite>
+
